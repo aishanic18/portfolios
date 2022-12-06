@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input:focus {
+    outline: 5px solid #d77aff;
+    border-color: transparent;
+  }
+
+  textarea:focus {
+    outline: 5px solid #d77aff;
+    border-color: transparent; 
+  }
+
+  input[type=submit] {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #FAEEFF;
+    color: black;
+  }
+
+  label{
+      color: white;
+      font-size: 20px;
+  }
+  
+  /* Style the my_contact/contact section */
+  .my_contact {
+    border-radius: 5px;
+    background-color: #000000;
+    padding: 40px;
+  }
+  
+  .my_contact h2{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .my_contact p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Create two my_columns that float next to eachother */
+  .my_column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 40px;
+  }
+  
+  /* Clear floats after the my_columns */
+  .my_row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two my_columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 796px) {
+    .my_column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

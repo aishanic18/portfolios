@@ -1,0 +1,99 @@
+.eats_intro h1 {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.eats_intro p {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+  /* font-family: 'Times New Roman', Times, serif; */
+}
+
+
+
+img {
+  --g:#0000 ,#000 .5deg 90deg,#0000 91deg;
+  --m:
+    conic-gradient(from 45deg ,var(--g)) 20px 0  no-repeat,
+    conic-gradient(from 135deg,var(--g)) 0 20px  no-repeat,
+    conic-gradient(from 225deg,var(--g)) -20px 0 no-repeat,
+    conic-gradient(from 315deg,var(--g)) 0 -20px no-repeat;
+  -webkit-mask: var(--m);
+          mask: var(--m);
+  transition: .3s linear;
+  filter: grayscale(.5);
+  cursor: pointer;
+}
+img:hover {
+  -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+  filter: grayscale(0);
+}
+
+*{
+    box-sizing: border-box;
+}
+.whole_gallery {
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+.food_gallery {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+.food_gallery > img{
+    margin: auto; 
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width: 769px) {
+  .whole_gallery{
+    padding: 50px;
+  }
+  .food_gallery > img{
+    width: 500px;
+    height: 200px;
+  }
+  
+  .food_gallery {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+@media screen and (min-width: 1025px) {
+  .food_gallery > img{
+    height: 200px;
+  }
+  .whole_gallery{
+    flex-direction: row-reverse;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-wrap: nowrap;
+  }
+
+  @media (prefers-reduced-motion){
+    img{
+      -webkit-mask-position: 0 0;
+          mask-position: 0 0;
+      filter: grayscale(0);
+    }
+  }
+}
